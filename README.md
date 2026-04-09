@@ -27,10 +27,9 @@
 
 2️⃣ 과제 2: 예외 처리 및 사용자 피드백 개선
 📸 실행 화면
-<img width="592" height="440" alt="과제 2 에러" src="https://github.com/user-attachments/assets/0b5281af-4cbc-49c2-aef5-371dcfdb4f73" />
 
+📝 주요 구현 내용<img width="594" height="437" alt="스크린샷 2026-04-09 174451" src="https://github.com/user-attachments/assets/7b557ea8-ceb0-4da8-8d3f-1cbea97dc4b1" />
 
-📝 주요 구현 내용
 메뉴 선택 검증: if 조건문을 통해 메인 메뉴(버거)가 선택되지 않았을 경우 주문이 진행되지 않도록 차단(return)합니다.
 
 동적 라벨 피드백: 별도의 메시지 박스 대신, 하단의 **총 금액 라벨(lblTotal)**의 텍스트와 색상(ForeColor)을 직접 변경하여 오류 메시지를 출력합니다.
