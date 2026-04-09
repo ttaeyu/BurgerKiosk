@@ -269,6 +269,8 @@
             // lblError
             // 
             lblError.AutoSize = true;
+            lblError.BackColor = SystemColors.Control;
+            lblError.ForeColor = SystemColors.Control;
             lblError.Location = new Point(384, 316);
             lblError.Name = "lblError";
             lblError.Size = new Size(39, 15);

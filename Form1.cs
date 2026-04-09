@@ -7,16 +7,22 @@ namespace BurgerKiosk
 
         // [가격표]
         int priceHam = 5000;
-        int priceBulgogi = 5500;
-        int priceChicken = 6000;
-        int priceFries = 2000;
-        int priceCoke = 1500;
-        int priceCheese = 500;
-        int priceSource = 300; // 소스값은 300원으로 정했소!
+        int priceBulgogi = 4000;
+        int priceChicken = 3000;
+        int priceFries = 3500;
+        int priceCoke = 2500;
+        int priceCheese = 1500;
+        int priceSource = 500; // 소스값은 300원으로 정했소!
 
         public Form1()
         {
             InitializeComponent();
+            rbHam.AutoCheck = false;      // 잠시 자동 체크 기능을 끄고
+            rbHam.Checked = false;       // 체크를 푼 다음에
+            rbHam.AutoCheck = true;       // 다시 기능을 켜주는 것이제!
+
+            rbBulgogi.Checked = false;
+            rbChicken.Checked = false;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -51,7 +57,7 @@ namespace BurgerKiosk
             }
             else
             {
-                lblError.Text = "오류: 추가할 메뉴를 먼저 골라주쇼!";
+                lblError.Text = "메뉴를 선택하세요!";
                 lblError.ForeColor = Color.Red;
                 return;
             }
