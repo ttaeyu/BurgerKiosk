@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             groupBox1 = new GroupBox();
             radioButton3 = new RadioButton();
@@ -43,9 +44,16 @@
             label2 = new Label();
             button1 = new Button();
             button2 = new Button();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            lblError = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -61,6 +69,9 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(pictureBox3);
+            groupBox1.Controls.Add(pictureBox2);
+            groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(radioButton3);
             groupBox1.Controls.Add(radioButton2);
             groupBox1.Controls.Add(radioButton1);
@@ -74,7 +85,7 @@
             // radioButton3
             // 
             radioButton3.AutoSize = true;
-            radioButton3.Location = new Point(6, 202);
+            radioButton3.Location = new Point(6, 188);
             radioButton3.Name = "radioButton3";
             radioButton3.Size = new Size(73, 19);
             radioButton3.TabIndex = 2;
@@ -85,7 +96,7 @@
             // radioButton2
             // 
             radioButton2.AutoSize = true;
-            radioButton2.Location = new Point(6, 122);
+            radioButton2.Location = new Point(6, 110);
             radioButton2.Name = "radioButton2";
             radioButton2.Size = new Size(85, 19);
             radioButton2.TabIndex = 1;
@@ -182,33 +193,79 @@
             label2.AutoSize = true;
             label2.Location = new Point(31, 183);
             label2.Name = "label2";
-            label2.Size = new Size(43, 15);
+            label2.Size = new Size(73, 15);
             label2.TabIndex = 1;
-            label2.Text = "총금액";
+            label2.Text = "총금액 : 0원";
             // 
             // button1
             // 
+            button1.BackColor = Color.Lime;
+            button1.Font = new Font("맑은 고딕", 12F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(384, 334);
             button1.Name = "button1";
             button1.Size = new Size(91, 48);
             button1.TabIndex = 4;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            button1.Text = "주문하기";
+            button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            button2.BackColor = Color.Red;
+            button2.Font = new Font("맑은 고딕", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(490, 334);
             button2.Name = "button2";
             button2.Size = new Size(88, 48);
             button2.TabIndex = 5;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            button2.Text = "초기화";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(90, 111);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(82, 50);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(90, 188);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(82, 50);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(90, 36);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(82, 50);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // lblError
+            // 
+            lblError.AutoSize = true;
+            lblError.Location = new Point(384, 316);
+            lblError.Name = "lblError";
+            lblError.Size = new Size(39, 15);
+            lblError.TabIndex = 6;
+            lblError.Text = "label3";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(596, 394);
+            Controls.Add(lblError);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(groupBox3);
@@ -216,13 +273,16 @@
             Controls.Add(groupBox1);
             Controls.Add(label1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "버거 주문 키오스크";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -244,5 +304,9 @@
         private ListBox listBox1;
         private Button button1;
         private Button button2;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
+        private Label lblError;
     }
 }
